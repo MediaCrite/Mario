@@ -36,16 +36,16 @@ public class Player : MonoBehaviour
     }
     void FixedUpdate()
     {
-        float moveInput = Input.GetAxisRaw("Horizontal"); // Мгновенный ввод (нет сглаживания)
+        float moveInput = Input.GetAxisRaw("Horizontal"); 
 
         if (moveInput != 0)
         {
-            // При движении задаём скорость напрямую
+            
             rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
         }
         else
         {
-            // Резкая остановка при отпускании клавиш
+            
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
     }
